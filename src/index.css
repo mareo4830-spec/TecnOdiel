@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7fbff;
+  color: #102a43;
+  font-family: 'Sora', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(0, 168, 255, 0.2);
+  color: #071a33;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #eef6fc;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00a8ff, #0369a1);
+  border-radius: 4px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(7, 26, 51, 0.08);
+  box-shadow: 0 18px 50px rgba(7, 26, 51, 0.06);
+}
+
+.glass-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(0, 168, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 24px 70px rgba(0, 119, 182, 0.14);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00a8ff 0%, #0369a1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-blue {
+  box-shadow: 0 10px 30px rgba(0, 168, 255, 0.25), 0 0 60px rgba(0, 168, 255, 0.12);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 168, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 168, 255, 0.055) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 168, 255, 0.12) 0%, transparent 62%);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8aa1b5;
+}
